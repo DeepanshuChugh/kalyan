@@ -1,0 +1,701 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/2a05cd7cd7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+<style> /* navbar TOP */
+    #topbox{
+        height: 43px;
+        width: 100%;
+        border: 0px solid black;
+        display: flex;
+        justify-content: space-around;
+       
+    }
+    /* topleft side content */
+    #topboxleft{
+       height: 43px;
+        width: 360px;
+        border: 0px solid black;
+        display: flex;
+        align-items: center;
+    }
+            /* topleft side innercontent */
+    
+    #topboxleftinner{
+        height: 16px;
+        width: 100%;
+        border: 0px solid black;
+        display: flex;
+        gap: 3px;
+       color: darkgray;
+       font-size: 11px;
+        cursor: pointer;
+        font-family: 'Poppins', sans-serif;
+    }
+
+         /* topright side content */
+    
+    #topboxright{
+       height: 43px;
+        width: 270px;
+        border: 0px solid black;
+        display: flex;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        
+    }
+    
+     /* topright side inner content */
+    #topboxrightinner{
+       height: 16px;
+        width: 100%;
+        border: 0px solid black;
+        display: flex; 
+        gap: 3px;
+       color: darkgray;
+       font-size: 11px;
+        cursor: pointer; 
+        gap: 5px;   
+    }
+
+    /* social media icons */
+    .navICON{
+        display: flex;
+       color: red;
+        font-size: 14px;
+        justify-content: space-around;
+        gap: 10px;
+       margin-top: -7px;
+    }
+    i{
+      border-radius: 50px;
+        font-size: 24px;   
+    }
+   
+   /*Main navbar */
+   #navbarmain{
+       height: 83px;
+       width: 100%;
+       border: 0px solid black;
+       display: flex;
+       justify-content: center;
+       cursor: pointer;
+   }
+   /* navbar inner content */
+   .navbarmaininnerleft,.navbarmaininnerright{
+       height: 100%;
+       display: flex;
+       align-items: center;
+       font-family: 'PT Sans', sans-serif;
+       color: #777171;
+       font-size: 15px;
+   }
+   .navbarmaininnerleft{
+       padding-right: 32px;
+   }
+   .navbarmaininnerright{
+       padding-left: 32px;
+   }
+
+   /* navbar center logo image */
+   #logo{
+       height: 150px;
+       width: 130px;
+       margin:-60px 20px 0px 20px 
+   }
+
+                                                     /* page-address */
+   #page-address{
+       margin: 18px 0px 18px 25px;
+       color: darkgray;
+   }
+
+   .curve{
+    height:42px ;
+    width: 8%;
+    margin-left: 50%;
+   -webkit-transform: translate(-50%,0%);
+   background-color:none ;
+   margin-top: -33.9px;
+}
+
+    .vl{
+        border-left: 1px black solid;
+        height: 75px;
+        margin-left: 50%;
+        margin-right: 50%;
+        margin-bottom: 0%;
+    }
+    
+    #h1-mid{
+        text-align: center;
+        margin: 0%;
+    }
+    #jewellery-content{
+        width: 90%;
+    margin: 0 auto;
+    color: #a8a7aa;
+    text-align: center!important;
+    font-size: larger;
+    }
+
+                                                          /* items */
+
+    .grid
+    {
+       
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows:repeat(10,1fr);
+        justify-content: space-around;
+        gap: 25px;
+
+
+    }
+    .grid>div{
+        border: 0.5px solid gray;
+        height: 250px;
+
+    }
+    .grid img{
+        width: 100%;
+        height: 100%;
+    }
+
+                                          /*Image Hover  */                             
+ .image {
+    position: relative;
+}
+
+.image__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+    
+}
+
+.image__overlay--blur {
+    backdrop-filter: blur(10px);
+    
+}
+
+.image__overlay--primary {
+    background: black;
+    
+}
+
+.image__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+    
+}
+
+.image__overlay:hover {
+    opacity: .8;
+}
+
+.image__overlay:hover > * {
+    transform: translateY(0);
+}
+
+.image__title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.image__description {
+    font-size: 1.25em;
+    margin-top: 0.25em;
+}
+
+.hover_text{
+    text-decoration-line: underline;
+    text-decoration-color: #CD2027;
+    
+}
+.image button{
+    background-color: transparent; 
+    border: 1px solid white;
+    color: white; 
+    margin-top: 100%;
+    margin-left: 3%;
+    margin-right : 3%;
+    width: 100px;
+    height: 40px;
+  
+}
+                                         /* last box */
+    
+    #last_box{
+        width: 100%;
+        height: 110px;
+        background-color:#E6E7E2 ;
+        border-top: 2px solid #CD2027;
+        display: grid;
+        grid-template-columns: 350px 250px 30px;
+        gap: 2px;
+        justify-content: center;
+        align-items: center;
+        
+
+       
+       
+    }
+   .newsbox{
+        text-align: center;
+        color: black;
+        background-color: white;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .emailbox{
+        padding-left: 12px;
+        color: gray;
+        background-color: white;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        
+
+    }
+    .email_button
+    {
+        background-color: white;
+        height: 30px;
+        border: none;
+        background-color: #CD2027;
+      
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+   
+   
+   </style>
+<body>
+      <!-- navbar TOP-->
+      <div id="topbox">
+        <div id="topboxleft">
+            <div id="topboxleftinner">
+                 <div>MY KALYAN /</div>
+                 <div>MEDIA /</div>
+                 <div>KALYAN NEWS /</div>
+                 <div>GOLD RATES /</div>
+                 <div>DIGITAL GOLD</div>
+            </div>
+        </div>
+     
+       <div></div>
+     <div id="topboxright">
+         <div id="topboxrightinner">
+            <div>FEEDBACK /</div>
+            <div>CONTACT /</div>
+            <div class="navICON">
+                <i  class="fa-brands fa-facebook"></i>
+                <i  class="fa-brands fa-twitter-square"></i>
+                <i  class="fa-brands fa-youtube"></i>
+                <i  class="fa-brands fa-instagram-square"></i>
+            </div>
+         </div> 
+     </div>
+    </div>
+
+  <!-- navbar -->
+        <div id="navbarmain">
+            <div class="navbarmaininnerleft">OUR BRANDS</div>
+            <div class="navbarmaininnerleft">MUHURAT</div>
+            <div class="navbarmaininnerleft">SHOP ONLINE</div>
+            <div class="navbarmaininnerleft">JEWELLERY</div>
+            <div><img id="logo"  src="https://www.kalyanjewellers.net/images/kalyan_logo.svg" alt="kalyan_logo"></div>
+            <div class="navbarmaininnerright">ABOUT US</div>
+            <div class="navbarmaininnerright">GIFT CARD</div>
+            <div class="navbarmaininnerright">AMBASSADOR</div>
+            <div class="navbarmaininnerright">STORE LOCATOR</div>
+        </div>
+
+        <div id="img-container">
+            <img src="https://www.kalyanjewellers.net/images/banners/diamond_banner.jpg" style="width: 100%;" alt="">
+        </div>
+
+        <div id="page-address">
+           <span>Home / </span>
+           <span>Jewellery </span>
+        </div>
+        <hr style="background-color: red;">
+        <div class="curve"><img  src="https://www.kalyanjewellers.net/images/devider.svg" alt=""></div>
+
+        <!-- Vertical Line -->
+
+        <div class="vl">
+        </div> 
+        <h1 id="h1-mid">JEWELLERY SET</h1>
+        <div id="jewellery-content">
+        <p>Certain metals are earth's gift to us, humans. Some of them are utilizing for fulfilling our fashion and lifestyle needs. Gold, platinum and precious stones are the real example of such metals. Jewellery is not only just metals that used for crafting ornaments but also they can protect from harmful energies and offers better health conditions. Kalyan Jewellers provides such high-quality gold, platinum and diamond jewellery depending upon customer satisfaction.</p></div>
+
+        <div class="grid">
+            
+
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Gold/images/kajjara-nimah-gold-jhumka.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Diamond/images/avian-butterfly-diamond-pendant.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Platinum/images/eowen-platinum-diamond-ring.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/images/toula-nimah-gold-bangle.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Bangles/images/hiranam-nivara-gold-bangle.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Earrings/images/dauntless-dahlia-gemstone-earrings.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Necklace/images/prashvi-tushi-kyra-gold-necklace.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Chains/images/rope-gold-chain.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Pendant/images/uttara-pink-spinel-pendant.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Rings/images/danusiya-navaratna-ring.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/images/4%20gram%20jewellery%20-1.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Bangles/images/keiarah-sankalp-gold-bracelet.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/images/rnpd1.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/images/sgnr1.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/images/Kamakshi-Mudhra-Gold-Choker-Necklace.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/images/dulhan1.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Gold/images/kajjara-nimah-gold-jhumka.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Diamond/images/avian-butterfly-diamond-pendant.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Platinum/images/eowen-platinum-diamond-ring.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/images/toula-nimah-gold-bangle.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Bangles/images/hiranam-nivara-gold-bangle.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Earrings/images/dauntless-dahlia-gemstone-earrings.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Necklace/images/prashvi-tushi-kyra-gold-necklace.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Chains/images/rope-gold-chain.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Pendant/images/uttara-pink-spinel-pendant.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Rings/images/danusiya-navaratna-ring.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/images/4%20gram%20jewellery%20-1.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Bangles/images/keiarah-sankalp-gold-bracelet.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/images/rnpd1.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/images/sgnr1.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/images/Kamakshi-Mudhra-Gold-Choker-Necklace.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/images/dulhan1.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Gold/images/kajjara-nimah-gold-jhumka.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Diamond/images/avian-butterfly-diamond-pendant.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Platinum/images/eowen-platinum-diamond-ring.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/images/toula-nimah-gold-bangle.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Bangles/images/hiranam-nivara-gold-bangle.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Earrings/images/dauntless-dahlia-gemstone-earrings.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Necklace/images/prashvi-tushi-kyra-gold-necklace.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Chains/images/rope-gold-chain.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Pendant/images/uttara-pink-spinel-pendant.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Rings/images/danusiya-navaratna-ring.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/images/4%20gram%20jewellery%20-1.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            <div class="image">
+              <img class="image__img" src="https://www.kalyanjewellers.net/images/Jewellery/Bangles/images/keiarah-sankalp-gold-bracelet.jpg" alt="">
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title"><u class="hover_text">Gold</u></div>
+                    <button>Take A look</button>
+                </div>
+            </div>
+            
+           <hr>
+        </div>
+       
+            <div id="last_box">
+               <div class="newsbox">SUBSCRIBE THE KALYAN NEWSLETTER</div>
+               <div class="emailbox">Email Address</div>
+               <div class="email_button">
+                <i class="fa-solid fa-angle-right" style="color: white;"></i>
+               </div>
+
+            </div>
+            <hr>
+       
+       
+       
+
+</body>
+</html>
