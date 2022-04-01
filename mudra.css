@@ -15,7 +15,7 @@
     align-items: center;
 }
         /* topleft side innercontent */
-
+        .navmain{margin-left: 50px;}
 #topboxleftinner{
     height: 16px;
     width: 100%;
@@ -152,6 +152,7 @@ nav ul ul li{
         display: flex;
         padding: 15px 20px;
     }
+    .modelimage{width: 100%;}
     #container>div:nth-child(2)>p{
         
         margin-left: 5px;
