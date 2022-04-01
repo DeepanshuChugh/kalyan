@@ -82,37 +82,80 @@
     i{
       border-radius: 50px;
         font-size: 24px;   
+        cursor: pointer;  
     }
-   
-   /*Main navbar */
-   #navbarmain{
-       height: 83px;
-       width: 100%;
-       border: 0px solid black;
-       display: flex;
-       justify-content: center;
-       cursor: pointer;
+    i:hover{color:#212529;}
+    #topboxleftinner>div{cursor: pointer;}
+
+#topboxleftinner>div:hover{ color:red;}
+   /* ---------------------------START OF NAVBAR CHANGES CSS PART---------------------- */
+   nav ul{
+
+       padding: 0 -15px;
+       margin: 0;
+       float:initial;
+       margin-left: 70px;
+       margin-top: -40px;
    }
-   /* navbar inner content */
-   .navbarmaininnerleft,.navbarmaininnerright{
-       height: 100%;
-       display: flex;
-       align-items: center;
-       font-family: 'PT Sans', sans-serif;
+   nav ul li{
+       background: white;
+       position: relative;
+       list-style: none;
+       display: inline-flex;
+       margin-right: 2px;
+       margin-left: 5px ;
+       transform: -webkit-transform translate(-50%, 0%);
+   }
+   .navlinemain{
+       background: white;
+   }
+   .navlinemain:hover{
+        cursor: pointer;
+        border-bottom: 1.5px solid #e30613;color: #e30613;   
+   }
+   nav ul li a{
+       display: block;
+       padding: 0 15px;
        color: #777171;
+       text-decoration: none ;
+       line-height: 40px;
        font-size: 15px;
    }
-   .navbarmaininnerleft{
-       padding-right: 32px;
+   nav>ul>li>ul>li>a{
+       color: black;
+       background-color: white;
+       font-size: medium;
    }
-   .navbarmaininnerright{
-       padding-left: 32px;
+   nav>ul>li>ul>li>a:hover{
+       border: none;
+       color: lightgrey;
+   }
+   nav ul ul{
+        position: absolute;
+        top: 60px;
+        display: none;
+
+   }
+   .navmain{margin-left: 50px;}
+   nav ul li:hover > ul{
+       display: block;
+
+   }
+   nav>ul>li>ul>li{
+       width: auto;
+       margin-left: -95px; 
+   }
+   nav ul ul li{
+       width: 100px;
+       float: none;
+       display: list-item;
+       position: relative;
    }
 
-   /* navbar center logo image */
    #logo{
        height: 150px;
        width: 130px;
+
        margin:-60px 20px 0px 20px 
    }
 
@@ -123,8 +166,8 @@
    }
 
    .curve{
-    height:42px ;
-    width: 8%;
+    height:20px ;
+    width: 6%;
     margin-left: 50%;
    -webkit-transform: translate(-50%,0%);
    background-color:none ;
@@ -160,13 +203,13 @@
         grid-template-columns: repeat(4,1fr);
         grid-template-rows:repeat(10,1fr);
         justify-content: space-around;
-        gap: 25px;
+        gap: 20px;
 
 
     }
     .grid>div{
         border: 0.5px solid gray;
-        height: 250px;
+        height: 320px;
 
     }
     .grid img{
@@ -254,65 +297,90 @@
     height: 40px;
   
 }
-                                         /* last box */
+
+
+                                        /* Footer  */
     
-    #last_box{
-        width: 100%;
-        height: 110px;
-        background-color:#E6E7E2 ;
-        border-top: 2px solid #CD2027;
-        display: grid;
-        grid-template-columns: 350px 250px 30px;
-        gap: 2px;
-        justify-content: center;
-        align-items: center;
-        
+                                        #input-content{    width: 102%;    height: 30px;    padding: 30px 0px 50px 0px ; margin-left: -5px;  background-color: #e6e7e2;   border-top: 3px solid #e30613 ;   }
+   
+   
+   #flex-box{    height: 30px;    width: 100%;    display: flex;    box-sizing: border-box;    justify-content: center;    gap: 5px;    }
+  
+  
+   #input-box{       border: 1px solid black;   height: 23px;;   padding: 8px 10px  0px 10px;   background-color: white;
+                     border: none;   color: #212529;   font-family: sans-serif;   font-size: 14px;    }
+  
+  
+   #input-box+input{    padding-left: 10px;     padding-top: 2px;    width: 280px;     border: none;    }
+  
+  
+   #iconright{    background-color: #e30613;     color: white;    width: 30px;    display: flex;
+                   justify-content: center;    align-items: center;  cursor: pointer; }
+  
+                   #iconright:hover{color:#212529; ;}
+   #footercontainer{       width: 100%;    height: 320px;       padding-top: 25px;    display: flex;
+                           justify-content: center;    gap: 30px;   }
 
+
+   #footer-left{     width: 820px;     height: 250px;      }
+  
+  
+   #footer-right{     width: 350px;    height: 270px;     box-sizing: border-box;    }
+  
+ 
+    #footer-right>input,#footer-right>select{    display: block;    width: 100%;    padding: 15px 0px 5px 15px;    border: none;
+                                                   border-bottom: 2px solid  #e6e7e2;;     font-size: 17px;   }
+  
+
+   #submit{     display: block;     margin-left: 82%;   margin-top: 20px;   padding: 5px 10px;  border: 1px solid #e30613 ;
+                   color: #e30613;     background-color: white;    cursor: pointer;     }
+
+
+   #footer-right>select{    color:#212529;      font-family:sans-serif;    font-weight: 300;
+                       width:105%;     padding-bottom: 0px;        cursor: pointer;        }
+
+
+ #footer-right>input:hover,#footer-right>select:hover {      outline:none!important;     }
+
+
+   #submit:hover{   color: white;   background-color: #e30613;     }
+
+   
+   #footer-left-top{    width: 100%;     height: 50px;   margin-top: 20px;    display: flex;      background-color: white;   }
+ 
+ 
+   #footer-left-top>div{       width: 25%;     height: 100%;}
+
+   #footer-left-top select{    width: 170PX;       height: 31;     font-size: 10px;    font-weight: 300;
+                           font-family: sans-serif;             padding: 8px 10px;     color: #e30613;     border-color: #e30613;}
+
+   #footer-left-top p{    font-size: 13px;    font-family: sans-serif;    color: #e30613;    cursor: pointer;   }
+
+   .navICON1{     display: flex;    color: red;     font-size: 22px;     gap: 7px;
        
-       
     }
-   .newsbox{
-        text-align: center;
-        color: black;
-        background-color: white;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .navICON1>i{ cursor: pointer;}
+    .navICON1>i:hover{color:  #212529;}
+    #footer-left-bottom{   display: flex;  }  
+ 
+    #footer-left-bottom>div{width: 31%;height: 180px;margin-top: 25px;}
 
-    }
-    .emailbox{
-        padding-left: 12px;
-        color: gray;
-        background-color: white;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        
+  #footer-left-bottom p{ font-size: 11px;font-family: sans-serif;line-height: 7px;margin-left: 15px; color: #212529;cursor: pointer;}
+  
+  #footer-left-bottom P:hover,#footer-left-top p:hover{ color: #c4c5c1;}
 
-    }
-    .email_button
-    {
-        background-color: white;
-        height: 30px;
-        border: none;
-        background-color: #CD2027;
-      
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-    }
-
+#middle{display: flex;cursor: pointer;}
+#middle:hover{color: #212529;}
+ #iconcircle{height: 25px;     margin: 5px 10px;     width: 25px;     border: 1px solid #e30613;  display:flex ;  justify-content: center;
+                             align-items: center;     border-radius: 50%;      }
    
    
    </style>
 <body>
-      <!-- navbar TOP-->
-      <div id="topbox">
+    <div id="topbox">
         <div id="topboxleft">
             <div id="topboxleftinner">
-                 <div>MY KALYAN /</div>
+                 <div >MY KALYAN /</div>
                  <div>MEDIA /</div>
                  <div>KALYAN NEWS /</div>
                  <div>GOLD RATES /</div>
@@ -326,28 +394,84 @@
             <div>FEEDBACK /</div>
             <div>CONTACT /</div>
             <div class="navICON">
-                <i  class="fa-brands fa-facebook"></i>
-                <i  class="fa-brands fa-twitter-square"></i>
-                <i  class="fa-brands fa-youtube"></i>
-                <i  class="fa-brands fa-instagram-square"></i>
+                <i  class="fa-brands fa-facebook col"></i>
+                <i  class="fa-brands fa-twitter-square col"></i>
+                <i  class="fa-brands fa-youtube col"></i>
+                <i  class="fa-brands fa-instagram-square col"></i>
             </div>
          </div> 
      </div>
     </div>
 
-  <!-- navbar -->
-        <div id="navbarmain">
-            <div class="navbarmaininnerleft">OUR BRANDS</div>
-            <div class="navbarmaininnerleft">MUHURAT</div>
-            <div class="navbarmaininnerleft">SHOP ONLINE</div>
-            <div class="navbarmaininnerleft">JEWELLERY</div>
-            <div><img id="logo"  src="https://www.kalyanjewellers.net/images/kalyan_logo.svg" alt="kalyan_logo"></div>
-            <div class="navbarmaininnerright">ABOUT US</div>
-            <div class="navbarmaininnerright">GIFT CARD</div>
-            <div class="navbarmaininnerright">AMBASSADOR</div>
-            <div class="navbarmaininnerright">STORE LOCATOR</div>
-        </div>
 
+    <!-- ---------------------------STARTING OF NAV BAR CHANGES------------------------------------- -->
+    <div class="navmain">
+        <nav style="font-family: 'PT Sans', sans-serif;">
+            <ul>
+                <li><a href="" class="navlinemain">OUR BRANDS</a>
+                        
+                    <ul>
+                        <!-- <div style="width: 300%; margin-left: -95px;"><h5 style="text-decoration: underline;">BRANDS FAMILY</h5></div> -->
+                        <li><a href="ourbrandsMudra.html" style="margin-top: 22px;">MUDHRA</a></li>
+                        <li><a href="ourbrandsNimah.html">NIMAH</a></li>
+                        <li><a href="ourbrandsAnokhi.html">ANOKHI</a></li>
+                        <li><a href="ourbrandsRang.html">RANG</a></li>
+                        <li><a href="">TEJASVI</a></li>
+                        <li><a href="">ZIAH</a></li>
+                    </ul> 
+                </li>
+                <li><a href="" class="navlinemain">MUHURAT</a>
+                    <ul>
+                      <li><a href="muhuratGujrat.html" style="margin-top: 22px;">GUJRAT</a></li>
+                      <li><a href="muhuratMah.html">MAHARASHTRA</a></li>
+                      <li><a href="muhuratPunjab.html">PUNJAB </a></li>
+                      <li><a href="muhuratRajasthan.html">RAJASTHAN</a></li>
+                      <li><a href="">UP </a></li>
+                    </ul> 
+                </li>
+                <li><a href="shopOnline.html" target="_blank" class="navlinemain">SHOP ONLINE</a>
+    
+                </li>
+                <li><a href="jewellery.html" class="navlinemain">JEWELLERY</a>
+                    <ul>
+                        <li><a href="" style="margin-top: 22px;" >CHAINS</a></li>
+                        <li><a href="">RINGS</a></li>
+                        <li><a href="">NECKLACES</a></li>
+                        <li><a href="">EARINGS</a></li>
+                        <li><a href="">BRACELETS</a></li>
+                        <li><a href="">BANGLES</a></li>
+                    </ul> 
+                </li>
+               <a href="index.html"><img id="logo"  src="https://www.kalyanjewellers.net/images/kalyan_logo.svg" alt="kalyan_logo"></a> 
+                <li><a href="aboutUs.html" class="navlinemain">ABOUT US</a>
+                    <!-- <ul>
+                        <li></li>
+                        ADD MORE OPTIONS HERE IF YOU WANT SIMILAR AS ABOVE
+                    </ul> -->
+                    
+                </li>
+                <li><a href="giftCard.html" class="navlinemain">GIFT CARD</a>
+                    <!-- <ul>
+                        <li></li>
+                        ADD MORE OPTIONS HERE IF YOU WANT SIMILAR AS ABOVE
+                    </ul> -->
+                </li>
+                <li><a href="ambassador.html" class="navlinemain">AMBASSADOR</a>
+                    <!-- <ul>
+                        <li></li>
+                        ADD MORE OPTIONS HERE IF YOU WANT SIMILAR AS ABOVE
+                    </ul> -->
+                </li>
+                <li><a href="storeLocator.html" class="navlinemain">STORE LOCATOR</a>
+                    <!-- <ul>
+                        <li></li>
+                        ADD MORE OPTIONS HERE IF YOU WANT SIMILAR AS ABOVE
+                    </ul> -->
+                </li>
+            </ul>
+        </nav>
+    </div>
+      
         <div id="img-container">
             <img src="https://www.kalyanjewellers.net/images/banners/diamond_banner.jpg" style="width: 100%;" alt="">
         </div>
@@ -683,19 +807,100 @@
             
            <hr>
         </div>
-       
-            <div id="last_box">
-               <div class="newsbox">SUBSCRIBE THE KALYAN NEWSLETTER</div>
-               <div class="emailbox">Email Address</div>
-               <div class="email_button">
-                <i class="fa-solid fa-angle-right" style="color: white;"></i>
-               </div>
+    
 
             </div>
-            <hr>
+            
+            <div>
+                <div id="input-content">
+                   <div id="flex-box"> <div id="input-box" style="font-weight: 300;">SUBSCRIBE THE KALYAN NEWSLETTER</div>
+                    <input type="email" placeholder="Email address">
+                   <div id="iconright"><i class="fa-solid fa-chevron-right" style="font-size: 13px;"></i></div> 
+                </div></div>
+            
+                <div id="footercontainer">
+                    <div id="footer-left"  >
+                        <div id="footer-left-top">
+                            <div>
+                                <select name="" id="selected" onclick="myFun()" >
+                                    <option value="" >SELECT YOUR COUNTRY</option>
+                                    <option value="">INDIA</option>
+                                    <option value="">UAE</option>
+                                    <option value="">QATAR</option>
+                                    <option value="">OMAN</option>
+                                    <option value="">KUWAIT</option>
+                                </select>
+                            </div>
+                            <div id="middle"><div id="iconcircle" ><i class="fa-solid fa-phone" style="font-size: 12px;color: red;"></i></div><p style="display: inline;">1800 - 4257333</p></div>
+                            <div><p >info@kalyanjewellers.net</p></div>
+                            <div class="navICON1" style="padding-left: 20px;">
+                                <i  class="fa-brands fa-facebook"></i>
+                                <i  class="fa-brands fa-twitter-square"></i>
+                                <i  class="fa-brands fa-youtube"></i>
+                                <i  class="fa-brands fa-instagram-square"></i>
+                                <i class="fa-brands fa-whatsapp-square" style="color:#25d366;"></i>
+                            </div>
+                        </div>
+                        <div id="footer-left-bottom">
+                            <div>
+                                <p>ABOUT US</p>
+                                <p>KALYAN NEWS</p>
+                                <p>CONTACT US</p>
+                                <p>STORE LOCATOR</p>
+                                <p>MEDIA</p>
+                                <p>THE KALYAN POMISE</p>
+                                <P>JEWELLERY WIKKI</P>
+                                <P>INVESTORS</P>
+                                
+                            </div>
+                            <div style="height: 135px; border-left: 1px solid #787e83 ;">
+                                <p>FAQ</p>
+                                <p>CAREER</p>
+                                <p>BE INFORMED</p>
+                                <p>EASY INSTALLMENT PLAN</p>
+                                <p>PARTNERING WITH TRUST</p>
+                                <P>GOLD RATE TODAY</P>
+                                <P>ONLINE PURCHASE</P>
+                            </div>
+                            <div  style="height: 100px; border-left: 1px solid #787e83 ;">
+                                <p>BLOG</p>
+                                <p>WHY BUY FROM US</p>
+                                <p>PRIVACY POLICY</p>
+                                <p>TERMS AND CONDITIONS</p>
+                                <p>SITEMAP</p>
+                                <P></P>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="footer-right">
+                        <h4 style="color:#212529; font-family:sans-serif; font-weight: 300;margin-top: 0px;">FEEDBACK</h4>
+                        <input type="text" placeholder="Full Name">
+                        <input type="number" placeholder="Mobile No:">
+                        <input type="email" placeholder="Email">
+                        <select name="feedback" id="feedbackselect" style="color: #787e83; margin-left: -3px;" >
+                            <option value="" >Feedback type</option>
+                            <option value="">Store Related Complaints</option>
+                            <option value="">Product Related Complaints</option>
+                            <option value="">General Queries</option>
+                            <option value="">Other Enquires</option>
+                        </select>
+                        <button id="submit">SUBMIT</button>
+                    </div>
+                </div>
+                <h6 style="text-align: center;color: #787e83;font-family: sans-serif;font-weight: 200;">Copyright © 2022 Kalyan Jewellers. All rights reserved</h6>
+            </div>
        
        
        
 
 </body>
 </html>
+<script>
+    function myFun()
+ {
+     var selected=document.querySelector("#selected")
+     selected.style.color="#212529"
+     selected.style.borderColor="blue"
+ }
+</script>
