@@ -68,35 +68,78 @@ i{
 }
 
 /*Main navbar */
-#navbarmain{
-   height: 83px;
-   width: 100%;
-   border: 0px solid black;
-   display: flex;
-   justify-content: center;
-   cursor: pointer;
+nav ul{
+    padding: 0 -15px;
+    margin: 0;
+    float:initial;
+    margin-left: 70px;
+    margin-top: -40px;
 }
-/* navbar inner content */
-.navbarmaininnerleft,.navbarmaininnerright{
-   height: 100%;
-   display: flex;
-   align-items: center;
-   font-family: 'PT Sans', sans-serif;
-   color: #777171;
-   font-size: 15px;
+nav ul li{
+    background: white;
+    position: relative;
+    list-style: none;
+    display: inline-flex;
+    margin-right: 2px;
+    margin-left: 5px ;
 }
-.navbarmaininnerleft{
-   padding-right: 32px;
+.navlinemain{
+    background: white;
 }
-.navbarmaininnerright{
-   padding-left: 32px;
+.navlinemain:hover{
+     cursor: pointer;
+     /* color: red;
+     text-decoration:underline red; */
+     border-bottom: 1.5px solid #e30613;color: #e30613;
+     
+     
 }
+nav ul li a{
+    display: block;
+    padding: 0 15px;
+    color: #777171;
+    text-decoration: none ;
+    line-height: 40px;
+    font-size: 15px;
+}
+nav>ul>li>ul>li>a{
+    color: black;
+    background-color: white;
+    font-size: medium;
+}
+nav>ul>li>ul>li>a:hover{
+    /* background: grey; */
+    border: none;
+    color: lightgrey;
+    /* text-decoration: underline; */
+}
+nav ul ul{
+     position: absolute;
+     top: 60px;
+     display: none;
 
+}
+nav ul li:hover > ul{
+    display: block;
+
+}
+nav>ul>li>ul>li{
+    /* border: 1px solid; */
+    width: auto;
+    margin-left: -95px;
+    
+}
+nav ul ul li{
+    width: 100px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
 /* navbar center logo image */
 #logo{
-   height: 150px;
-   width: 130px;
-   margin:-60px 20px 0px 20px 
+    height: 150px;
+    width: 130px;
+    margin:-20px 20px -40px 20px 
 }
 
 
@@ -362,74 +405,74 @@ i{
     /* --------------------foooter---------------------- */
 
     #input-content{    width: 102%;    height: 30px;    padding: 30px 0px 50px 0px ; margin-left: -5px;  background-color: #e6e7e2;   border-top: 3px solid #e30613 ;   }
-
-
-#flex-box{    height: 30px;    width: 100%;    display: flex;    box-sizing: border-box;    justify-content: center;    gap: 5px;    }
-
-
-#input-box{       border: 1px solid black;   height: 23px;;   padding: 8px 10px  0px 10px;   background-color: white;
-                 border: none;   color: #212529;   font-family: sans-serif;   font-size: 14px;    }
-
-
-#input-box+input{    padding-left: 10px;     padding-top: 2px;    width: 280px;     border: none;    }
-
-
-#iconright{    background-color: #e30613;     color: white;    width: 30px;    display: flex;
-               justify-content: center;    align-items: center;   }
-
-
-#footercontainer{       width: 100%;    height: 320px;       padding-top: 25px;    display: flex;
-                       justify-content: center;    gap: 30px;   }
-
-
-#footer-left{     width: 820px;     height: 250px;      }
-
-
-#footer-right{     width: 350px;    height: 270px;     box-sizing: border-box;    }
-
-
-#footer-right>input,#footer-right>select{    display: block;    width: 100%;    padding: 15px 0px 5px 15px;    border: none;
-                                               border-bottom: 2px solid  #e6e7e2;;     font-size: 17px;   }
-
-
-#submit{     display: block;     margin-left: 82%;   margin-top: 20px;   padding: 5px 10px;  border: 1px solid #e30613 ;
-               color: #e30613;     background-color: white;    cursor: pointer;     }
-
-
-#footer-right>select{    color:#212529;      font-family:sans-serif;    font-weight: 300;
-                   width:105%;     padding-bottom: 0px;        cursor: pointer;        }
-
-
-#footer-right>input:hover,#footer-right>select:hover {      outline:none!important;     }
-
-
-#submit:hover{   color: white;   background-color: #e30613;     }
-
-
-#footer-left-top{    width: 100%;     height: 50px;   margin-top: 20px;    display: flex;      background-color: white;   }
-
-
-#footer-left-top>div{       width: 25%;     height: 100%;}
-
-#footer-left-top select{    width: 170PX;       height: 31;     font-size: 10px;    font-weight: 300;
-                       font-family: sans-serif;             padding: 8px 10px;     color: #e30613;     border-color: #e30613;}
-
-#footer-left-top p{    font-size: 13px;    font-family: sans-serif;    color: #e30613;    cursor: pointer;   }
-
-.navICON1{     display: flex;    color: red;     font-size: 22px;     gap: 7px;
    
-}
-.navICON1>i{ cursor: pointer;}
+   
+    #flex-box{    height: 30px;    width: 100%;    display: flex;    box-sizing: border-box;    justify-content: center;    gap: 5px;    }
+   
+   
+    #input-box{       border: 1px solid black;   height: 23px;;   padding: 8px 10px  0px 10px;   background-color: white;
+                      border: none;   color: #212529;   font-family: sans-serif;   font-size: 14px;    }
+   
+   
+    #input-box+input{    padding-left: 10px;     padding-top: 2px;    width: 280px;     border: none;    }
+   
+   
+    #iconright{    background-color: #e30613;     color: white;    width: 30px;    display: flex;
+                    justify-content: center;    align-items: center;  cursor: pointer; }
+   
+                    #iconright:hover{color:#212529; ;}
+    #footercontainer{       width: 100%;    height: 320px;       padding-top: 25px;    display: flex;
+                            justify-content: center;    gap: 30px;   }
 
-#footer-left-bottom{   display: flex;  }  
 
-#footer-left-bottom>div{width: 31%;height: 180px;margin-top: 25px;}
+    #footer-left{     width: 820px;     height: 250px;      }
+   
+   
+    #footer-right{     width: 350px;    height: 270px;     box-sizing: border-box;    }
+   
+  
+     #footer-right>input,#footer-right>select{    display: block;    width: 100%;    padding: 15px 0px 5px 15px;    border: none;
+                                                    border-bottom: 2px solid  #e6e7e2;;     font-size: 17px;   }
+   
 
-#footer-left-bottom p{ font-size: 11px;font-family: sans-serif;line-height: 7px;margin-left: 15px; color: #212529;cursor: pointer;}
+    #submit{     display: block;     margin-left: 82%;   margin-top: 20px;   padding: 5px 10px;  border: 1px solid #e30613 ;
+                    color: #e30613;     background-color: white;    cursor: pointer;     }
+ 
+ 
+    #footer-right>select{    color:#212529;      font-family:sans-serif;    font-weight: 300;
+                        width:105%;     padding-bottom: 0px;        cursor: pointer;        }
+ 
+ 
+  #footer-right>input:hover,#footer-right>select:hover {      outline:none!important;     }
 
-#footer-left-bottom P:hover,#footer-left-top p:hover{ color: #c4c5c1;}
+ 
+    #submit:hover{   color: white;   background-color: #e30613;     }
 
-#middle{display: flex;}
+    
+    #footer-left-top{    width: 100%;     height: 50px;   margin-top: 20px;    display: flex;      background-color: white;   }
+  
+  
+    #footer-left-top>div{       width: 25%;     height: 100%;}
 
-#iconcircle{height: 25px;     margin: 5px 10px;     width: 25px;     border: 1px solid #e30613;  display:flex ;  justify-content: center;
-                         align-items: center;     border-radius: 50%;      }
+    #footer-left-top select{    width: 170PX;       height: 31;     font-size: 10px;    font-weight: 300;
+                            font-family: sans-serif;             padding: 8px 10px;     color: #e30613;     border-color: #e30613;}
+
+    #footer-left-top p{    font-size: 13px;    font-family: sans-serif;    color: #e30613;    cursor: pointer;   }
+
+    .navICON1{     display: flex;    color: red;     font-size: 22px;     gap: 7px;
+        
+     }
+     .navICON1>i{ cursor: pointer;}
+     .navICON1>i:hover{color:  #212529;}
+     #footer-left-bottom{   display: flex;  }  
+  
+     #footer-left-bottom>div{width: 31%;height: 180px;margin-top: 25px;}
+
+   #footer-left-bottom p{ font-size: 11px;font-family: sans-serif;line-height: 7px;margin-left: 15px; color: #212529;cursor: pointer;}
+   
+   #footer-left-bottom P:hover,#footer-left-top p:hover{ color: #c4c5c1;}
+
+#middle{display: flex;cursor: pointer;}
+#middle:hover{color: #212529;}
+  #iconcircle{height: 25px;     margin: 5px 10px;     width: 25px;     border: 1px solid #e30613;  display:flex ;  justify-content: center;
+                              align-items: center;     border-radius: 50%;      }
